@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	* {
+		outline:none;
+		border:none;
+		margin:0px;
+		padding:0px;
+		font-family:Courier, monospace;
+	}
+	body {
+		background:#333 url(https://static.tumblr.com/maopbtg/a5emgtoju/inflicted.png) repeat;        
+	}
+	#paper {
+		color:#FFF;
+		font-size:20px;
+	}
+	#margin {
+		margin-left:12px;
+		margin-bottom:20px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none; 
+	}
+	#text {
+		width:500px;
+		overflow:hidden;
+		background-color:#FFF;
+		color:#222;
+		font-family:Courier, monospace;
+		font-weight:normal;
+		font-size:24px;
+		resize:none;
+		line-height:40px;
+		padding-left:100px;
+		padding-right:100px;
+		padding-top:45px;
+		padding-bottom:34px;
+		background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+		background-repeat:repeat-y, repeat;
+		-webkit-border-radius:12px;
+		border-radius:12px;
+		-webkit-box-shadow: 0px 2px 14px #000;
+		box-shadow: 0px 2px 14px #000;
+		border-top:1px solid #FFF;
+		border-bottom:1px solid #FFF;
+	}
+	#title {
+		background-color:transparent;
+		border-bottom:3px solid #FFF;
+		color:#FFF;
+		font-size:20px;
+		font-family:Courier, monospace;
+		height:28px;
+		font-weight:bold;
+		width:220px;
+	}
+	#submit {
+		cursor:pointer;
+		margin-top:20px;
+		float:right;
+		height:40px;
+		padding-left:24px;
+		padding-right:24px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		font-size:20px;
+		color:#FFF;
+		text-shadow: 0px -1px 0px #000000;
+		-webkit-border-radius:8px;
+		border-radius:8px;
+		border-top:1px solid #FFF;
+		-webkit-box-shadow: 0px 2px 14px #000;
+		box-shadow: 0px 2px 14px #000;
+		background-color: #62add6;
+		background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+		background-repeat:repeat-x;
+	}
+	#submit:active {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+	#submit:focus {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+	#submit2 {
+		cursor:pointer;
+		margin-top:20px;
+		float:left;
+		height:40px;
+		padding-left:24px;
+		padding-right:24px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		font-size:20px;
+		color:#FFF;
+		text-shadow: 0px -1px 0px #000000;
+		-webkit-border-radius:8px;
+		border-radius:8px;
+		border-top:1px solid #FFF;
+		-webkit-box-shadow: 0px 2px 14px #000;
+		box-shadow: 0px 2px 14px #000;
+		background-color: #62add6;
+		background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+		background-repeat:repeat-x;
+	}
+	#submit2:active {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+	#submit2:focus {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+	#submit3 {
+		cursor:pointer;
+		margin-top:20px;
+		float:left;
+		height:40px;
+		padding-left:24px;
+		padding-right:24px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		font-size:20px;
+		color:#FFF;
+		text-shadow: 0px -1px 0px #000000;
+		-webkit-border-radius:8px;
+		border-radius:8px;
+		border-top:1px solid #FFF;
+		-webkit-box-shadow: 0px 2px 14px #000;
+		box-shadow: 0px 2px 14px #000;
+		background-color: #62add6;
+		background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+		background-repeat:repeat-x;
+	}
+	#submit3:active {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+	#submit3:focus {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+	#submit4 {
+		cursor:pointer;
+		margin-top:20px;
+		float:left;
+		height:40px;
+		padding-left:24px;
+		padding-right:24px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		font-size:20px;
+		color:#FFF;
+		text-shadow: 0px -1px 0px #000000;
+		-webkit-border-radius:8px;
+		border-radius:8px;
+		border-top:1px solid #FFF;
+		-webkit-box-shadow: 0px 2px 14px #000;
+		box-shadow: 0px 2px 14px #000;
+		background-color: #62add6;
+		background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+		background-repeat:repeat-x;
+	}
+	#submit4:active {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+	#submit4:focus {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+	#wrapper {
+		width:700px;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:24px;
+		margin-bottom:100px;
+	}
+	#map{
+		width: 100%;
+		height: 600px;
+	}
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th, td {
+		text-align: left;
+		padding: 8px;
+	}
+
+	tr{background-color: #f2f2f2}
+</style>
+
+<!-- Sweet Alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+	<div id="map"></div>
+
+	<div id="wrapper">
+		
+		<textarea placeholder="Ham Veriyi Buraya Kopyalaynız." id="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>  
+		<br>
+		
+		<input id="submit" type="submit" value="İndirgenmiş Veriyi Göster" onclick="myFunction()">
+		<input id="submit2" type="submit" value="Ham Veriyi Göster" onclick="hamveri()">		
+		<button id="submit3" onclick="alanSorgula()">Alan Sorgula</button>		
+		<button id="submit4" onclick="alanSorgula2()">Alan Sorgula</button>		
+
+	</div>
+	
+	<div id="aSonuc" style="background-color: white;">
+		
+	</div>
+
+
+	<div style="overflow-x:auto;" id="tablo">
+		<table>
+			<tr>
+				<td>İndirgenme Oranı</td>
+				<td>İndirgenme Süresi</td>
+			</tr>
+			<tr>
+				<td id="ioran"></td>
+				<td id="izaman"></td>
+			</tr>
+		</table>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+	<script type="text/javascript">
+
+		document.getElementById("map").style.display = "none";
+		document.getElementById("tablo").style.display = "none";
+		document.getElementById("submit3").style.display = "none";
+		document.getElementById("submit4").style.display = "none";
+
+		function myFunction() {
+			document.getElementById("submit").style.display = "none";
+			document.getElementById("submit2").style.display = "none";
+			document.getElementById("text").style.display = "none";
+			document.getElementById("map").style.display = "block";
+			document.getElementById("tablo").style.display = "block";
+			document.getElementById("submit3").style.display = "inline";
+		}
+
+		function hamveri() {
+			document.getElementById("submit").style.display = "none";
+			document.getElementById("submit2").style.display = "none";
+			document.getElementById("text").style.display = "none";
+			document.getElementById("map").style.display = "block";
+			document.getElementById("submit4").style.display = "inline";
+		}
+
+		function alanSorgula(){		
+			var tekobje='';	
+
+
+
+
+			
+			rectangle.addListener('bounds_changed', showNewRect);
+
+			for (var i = 0; i < flightObject.length; i++) {
+				if (flightObject[i].lat < ne.lat() && flightObject[i].lng < ne.lng()) {
+					if (flightObject[i].lat > sw.lat() && flightObject[i].lng > sw.lng()) {
+						alanSonuc.push(flightObject[i]);
+					}
+				}
+			}
+			for (var i = 0; i < alanSonuc.length; i++) {
+				tekobje=tekobje+alanSonuc[i].lat+","+alanSonuc[i].lng+"<br>";
+
+			}
+
+
+			clearMarkers();
+			for (var i = 0; i < alanSonuc.length; i++) {
+				addMarkerWithTimeout(alanSonuc[i], i * 200);
+			}
+
+
+
+			document.getElementById("aSonuc").innerHTML= tekobje;
+			a=0;
+			alanSonuc=[];
+		}
+
+		function alanSorgula2(){		
+			var tekobje='';	
+			rectangle.addListener('bounds_changed', showNewRect);
+			console.log(alansonuc2);
+
+			console.log(ne.lat()+","+ne.lng()+"   "+sw.lat()+","+sw.lng());
+			for (var i = 0; i < alansonuc2.length; i++) {
+				if (alansonuc2[i].lat < ne.lat() && alansonuc2[i].lng < ne.lng()) {
+					if (alansonuc2[i].lat > sw.lat() && alansonuc2[i].lng > sw.lng()) {
+						alanSonuc.push(alansonuc2[i]);
+					}
+				}
+			}
+			console.log(alanSonuc);
+			for (var i = 0; i < alanSonuc.length; i++) {
+				tekobje=tekobje+alanSonuc[i].lat+","+alanSonuc[i].lng+"<br>";
+
+			}
+
+			clearMarkers();
+			for (var i = 0; i < alanSonuc.length; i++) {
+				addMarkerWithTimeout(alanSonuc[i], i * 200);
+			}
+			document.getElementById("aSonuc").innerHTML= tekobje;
+			a=0;
+			alanSonuc=[];
+		}
+
+
+
+		function addMarkerWithTimeout(position, timeout) {
+        window.setTimeout(function() {
+          markers.push(new google.maps.Marker({
+            position: position,
+            map: map,
+            animation: google.maps.Animation.DROP
+          }));
+        }, timeout);
+      }
+
+      function clearMarkers() {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(null);
+        }
+        markers = [];
+      }
+	</script>
+
+	<script>
+		"use strict";
+		var socket = io();
+
+		var mapCanvas;
+		var mapOptions;
+		var map;
+		var rectangle;
+		var markers = [];
+		var ne;
+		var sw;
+		var a = 0
+		var alanSonuc = [];
+		var alansonuc2 = [];
+
+		var flightPath;
+		var flightObject=[];
+		var points=[];
+		$(document).ready( () => {
+
+
+   //İndirgenmiş veriyi bulmak için sunucuya bunu gönderiyoruz.
+   $('#submit').click( () => {
+   	socket.emit('message', $('#text').val());
+   	$('#text').val(''); 
+
+   });
+   // Ham Veriyi Göstermek için Sunucuya bunu gönderiyoruz.
+   $('#submit2').click( () => {
+   	socket.emit('hamveri', $('#text').val());
+   	$('#text').val(''); 
+
+   });
+
+
+  	// İndirgeme verisini dinler
+  	socket.on('show-message', (text) => {
+
+  		socket.emit('indirgeme',text);
+
+  	});
+
+   // Hamveriyi dinler
+
+   socket.on('hamverigoster', (points) => {
+   	
+   	for (var i = 0; i < points.length; i++) {
+   		alansonuc2.push({
+   			lat:parseFloat(points[i].lat),
+   			lng:parseFloat(points[i].lng)
+   		});		
+   	}
+   	
+
+   	var lineSymbol = {
+   		path: google.maps.SymbolPath.CIRCLE,
+   		scale: 8,
+   		strokeColor: '#393'
+   	};
+   	flightPath = new google.maps.Polyline({
+   		path: points,
+   		icons: [{
+   			icon: lineSymbol,
+   			offset: '100%'
+   		}],
+   		strokeColor: "#0000FF",
+   		strokeOpacity: 0.8,
+   		strokeWeight: 2
+   	});
+
+
+   	var bounds = {
+   		north: points[0].lat,
+   		south: points[0].lat,
+   		east: points[0].lng,
+   		west: points[0].lng
+   	};
+
+   	// Alan arama dikdörtgenini başlatır.
+   	rectangle = new google.maps.Rectangle({
+   		bounds: bounds,
+   		editable: true,
+   		draggable: true
+   	});
+
+   	rectangle.setMap(map);
+   	animateCircle(flightPath);
+   	flightPath.setMap(map);
+   	
+   });
+
+   
+   // Sunucudan indirgenmiş veriyi dinler ve çizdiri.
+   socket.on('indirgenmis',(dizi,oran,zaman)=>{
+   	document.getElementById("ioran").innerHTML = oran;
+   	document.getElementById("izaman").innerHTML = zaman;
+   	
+   	for (var i = 0; i < dizi.length; i++) {
+   		var tekli={lat: parseFloat(dizi[i].x), lng: parseFloat(dizi[i].y)};
+   		flightObject.push(tekli);
+   	}
+   	console.log(flightObject.length);
+   	var lineSymbol = {
+   		path: google.maps.SymbolPath.CIRCLE,
+   		scale: 8,
+   		strokeColor: '#393'
+   	};
+   	flightPath = new google.maps.Polyline({
+   		path: flightObject,
+   		icons: [{
+   			icon: lineSymbol,
+   			offset: '100%'
+   		}],
+   		strokeColor: "#0000FF",
+   		strokeOpacity: 0.8,
+   		strokeWeight: 2
+   	});
+
+   	
+
+   	var bounds = {
+   		north: flightObject[0].lat,
+   		south: flightObject[0].lat,
+   		east: flightObject[0].lng,
+   		west: flightObject[0].lng
+   	};
+
+   	// Alan arama dikdörtgenini başlatır.
+   	rectangle = new google.maps.Rectangle({
+   		bounds: bounds,
+   		editable: true,
+   		draggable: true
+   	});
+
+   	rectangle.setMap(map);
+
+
+
+   	animateCircle(flightPath);
+   	flightPath.setMap(map);
+
+
+   });
+
+   function animateCircle(line) {
+   	var count = 0;
+   	window.setInterval(function() {
+   		count = (count + 1) % 200;
+
+   		var icons = line.get('icons');
+   		icons[0].offset = (count / 2) + '%';
+   		line.set('icons', icons);
+   	}, 200);
+   }
+});
+
+		// Kaynak:https://developers.google.com/maps/documentation/javascript/examples/polyline-simple
+
+		function myMap() {
+
+			mapCanvas = document.getElementById("map");
+			mapOptions = {center: new google.maps.LatLng(39.98161,116.32741), zoom: 15};
+			map = new google.maps.Map(mapCanvas,mapOptions);
+
+		}
+
+
+		function showNewRect(event) {
+			ne = rectangle.getBounds().getNorthEast();
+			sw = rectangle.getBounds().getSouthWest();
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCt8PDJ26txVpwlGfiYv9w-3wpONuhqdw&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+</body>
+</html>
